@@ -1,8 +1,9 @@
-import Utils.CollectionUtils;
+package ru.vsu.cs.oop.khalibekov_a_b.task1.DemoApp;
 
+import ru.vsu.cs.oop.khalibekov_a_b.task1.utils.CollectionUtils;
 import java.util.*;
 
-public class Main {
+public class DemoApp {
     public static void main(String[] args) {
         List<String> originalList = Arrays.asList("a", "b", "c", "d");
         Map<Integer, String> originalMap = new HashMap<>();

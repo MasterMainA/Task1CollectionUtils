@@ -1,4 +1,4 @@
-package Utils;
+package ru.vsu.cs.oop.khalibekov_a_b.task1.utils;
 
 import java.util.*;
 

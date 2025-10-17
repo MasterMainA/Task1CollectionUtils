@@ -1,11 +1,12 @@
-package Utils;
+package ru.vsu.cs.oop.khalibekov_a_b.task1.utils;
 
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
-class WriteOnlyCollection<T> implements Collection<T> {
-    private final Collection<T> delegate = new ArrayList<>();
+class WriteOnlySet<T> implements Set<T> {
+    private final Set<T> delegate = new HashSet<>();
 
     @Override
     public boolean add(T element) {
