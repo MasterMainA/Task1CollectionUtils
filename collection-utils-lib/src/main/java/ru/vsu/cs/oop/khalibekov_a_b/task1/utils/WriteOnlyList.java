@@ -4,26 +4,26 @@ import java.util.*;
 import java.util.function.UnaryOperator;
 
 class WriteOnlyList<T> implements List<T> {
-    private final List<T> delegate = new ArrayList<>();
+    private final List<T> writeOnlyList = new ArrayList<>();
 
     @Override
     public boolean add(T element) {
-        return delegate.add(element);
+        return writeOnlyList.add(element);
     }
 
     @Override
     public void add(int index, T element) {
-        delegate.add(index, element);
+        writeOnlyList.add(index, element);
     }
 
     @Override
     public boolean addAll(Collection<? extends T> collection) {
-        return delegate.addAll(collection);
+        return writeOnlyList.addAll(collection);
     }
 
     @Override
     public boolean addAll(int index, Collection<? extends T> collection) {
-        return delegate.addAll(index, collection);
+        return writeOnlyList.addAll(index, collection);
     }
 
     @Override

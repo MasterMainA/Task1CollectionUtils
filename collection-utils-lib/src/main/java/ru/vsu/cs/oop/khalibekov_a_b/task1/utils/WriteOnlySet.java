@@ -6,16 +6,16 @@ import java.util.Iterator;
 import java.util.Set;
 
 class WriteOnlySet<T> implements Set<T> {
-    private final Set<T> delegate = new HashSet<>();
+    private final Set<T> writeOnlySet = new HashSet<>();
 
     @Override
     public boolean add(T element) {
-        return delegate.add(element);
+        return writeOnlySet.add(element);
     }
 
     @Override
     public boolean addAll(Collection<? extends T> collection) {
-        return delegate.addAll(collection);
+        return writeOnlySet.addAll(collection);
     }
 
     @Override

@@ -5,16 +5,16 @@ import java.util.Collection;
 import java.util.Iterator;
 
 class WriteOnlyCollection<T> implements Collection<T> {
-    private final Collection<T> delegate = new ArrayList<>();
+    private final Collection<T> writeOnlyCollection = new ArrayList<>();
 
     @Override
     public boolean add(T element) {
-        return delegate.add(element);
+        return writeOnlyCollection.add(element);
     }
 
     @Override
     public boolean addAll(Collection<? extends T> collection) {
-        return delegate.addAll(collection);
+        return writeOnlyCollection.addAll(collection);
     }
 
     @Override

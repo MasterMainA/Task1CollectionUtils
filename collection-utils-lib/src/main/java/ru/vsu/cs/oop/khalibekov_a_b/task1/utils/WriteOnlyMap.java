@@ -6,17 +6,17 @@ import java.util.Map;
 import java.util.Set;
 
 class WriteOnlyMap<K, V> implements Map<K, V> {
-    private final Map<K, V> delegate = new HashMap<>();
+    private final Map<K, V> writeOnlyMap = new HashMap<>();
 
     // Write operations - разрешены
     @Override
     public V put(K key, V value) {
-        return delegate.put(key, value);
+        return writeOnlyMap.put(key, value);
     }
 
     @Override
     public void putAll(Map<? extends K, ? extends V> m) {
-        delegate.putAll(m);
+        writeOnlyMap.putAll(m);
     }
 
     // Read operations - запрещены
